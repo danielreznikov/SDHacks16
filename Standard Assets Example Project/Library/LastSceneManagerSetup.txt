@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/SampleScenes/Scenes/AircraftJet2Axis.unity
+  isLoaded: 1
+  isActive: 1
