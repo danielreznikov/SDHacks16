@@ -23,6 +23,7 @@ GameObject:
   - 65: {fileID: 65000010436110946}
   - 23: {fileID: 23000011971153464}
   - 114: {fileID: 114000012269643990}
+  - 122: {fileID: 122000010732095740}
   m_Layer: 0
   m_Name: Pick Up
   m_TagString: Pick Up
@@ -102,3 +103,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583b9101323489b4eb40e14fc352399e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!122 &122000010732095740
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010153290214}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278925449
+  m_Size: 1
