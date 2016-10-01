@@ -45,6 +45,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     smoothTime * Time.deltaTime);
                 camera.localRotation = Quaternion.Slerp (camera.localRotation, m_CameraTargetRot,
                     smoothTime * Time.deltaTime);
+
+                Debug.Log(yRot);
+
             }
             else
             {
