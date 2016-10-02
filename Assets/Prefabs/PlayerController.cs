@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 			collected += 1;
         }
 
-		gui.text = "Collected " + collected + "/10";
+		//gui.text = "Collected " + collected + "/10";
 
     }
 }

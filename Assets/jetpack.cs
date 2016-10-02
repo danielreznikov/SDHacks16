@@ -6,14 +6,14 @@ public class jetpack : MonoBehaviour {
 	private Rigidbody rb;
 	private float rightTrigger;
     private float leftTrigger;
-	private float speed = 500;
+	private float speed = 250;
     private float brakeCoef = 50;
     private Vector3 maxSpeed;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-        maxSpeed = new Vector3(100, 100, 100);
+        maxSpeed = new Vector3(30, 30, 30);
 	}
 	
 	// Update is called once per frame
