@@ -6,14 +6,14 @@ public class jetpack : MonoBehaviour {
 	private Rigidbody rb;
 	private float rightTrigger;
     private float leftTrigger;
-	private float speed = 100;
-    private float brakeCoef = 25;
+	private float speed = 500;
+    private float brakeCoef = 50;
     private Vector3 maxSpeed;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
-        maxSpeed = new Vector3(30, 30, 30);
+        maxSpeed = new Vector3(100, 100, 100);
 	}
 	
 	// Update is called once per frame
@@ -31,7 +31,11 @@ public class jetpack : MonoBehaviour {
         leftTrigger = Input.GetAxis("Xbox360LeftTrigger");
         Vector3 cameraPosition = Camera.main.gameObject.transform.forward;
         //rb.AddForce ((new Vector3(0, 20, 0) + cameraPosition) * speed * (rightTrigger - leftTrigger));
-        rb.AddForce(cameraPosition * speed * rightTrigger);
+
+        Vector3 vForce = cameraPosition * speed * rightTrigger;
+        Debug.Log("Force: " + vForce);
+        rb.AddForce(vForce);
+
         rb.AddForce(-1 * rb.velocity * brakeCoef * leftTrigger);
         Debug.Log("Speed: " + rb.velocity.magnitude);
         rb.velocity = Vector3.Min(rb.velocity, maxSpeed);
